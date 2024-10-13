@@ -14,15 +14,15 @@ const HeroContent: React.FC = () => {
     <motion.div
       initial="hidden"
       animate="visible"
-      className="flex flex-col lg:flex-row items-center justify-between px-6 lg:px-20 mb-20 w-full z-20"
+      className="flex flex-col lg:flex-row items-center justify-between px-4 lg:px-20 mb-10 w-full z-20"
     >
       <div className="flex flex-col max-w-md gap-5 justify-center text-start">
         <motion.div
           variants={slideInFromTop}
-          className="welcome-box py-3 px-3 border rounded-xl border-[#7042f88b]"
+          className="welcome-box py-3 px-3 border rounded-xl border-[#7042f88b] bg-opacity-60 backdrop-blur"
         >
           <SparklesIcon className="text-purple-400 ml-1 h-6 w-6 float-left mx-6" />
-          <h1 className="welcome-text text-[16px] md:text-[18px] text-white tracking-widest">
+          <h1 className="welcome-text text-[14px] md:text-[18px] text-white tracking-widest">
             FRONTEND DEVELOPER{" "}
             <span className="text-purple-300 -tracking-tight">PORTFOLIO</span>
           </h1>
@@ -33,7 +33,7 @@ const HeroContent: React.FC = () => {
           className="flex flex-col gap-4 text-white"
         >
           <h1>
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500 text-[28px] md:text-[32px] lg:text-[40px] font-extrabold tracking-widest">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500 text-[24px] md:text-[32px] lg:text-[40px] font-extrabold tracking-widest">
               KASHIF IMRAN
             </span>
           </h1>
@@ -44,7 +44,7 @@ const HeroContent: React.FC = () => {
           </p>
           <motion.a
             variants={slideInFromLeft(1)}
-            href="/Kashif-Resume.pdf" // Ensure this path is correct
+            href="/Kashif-Resume.pdf"
             download
             className="inline-block"
           >
@@ -64,7 +64,7 @@ const HeroContent: React.FC = () => {
           alt="Kashif Imran"
           height={600}
           width={600}
-          className="object-cover rounded-lg"
+          className="object-cover rounded-lg w-full h-auto max-w-xs md:max-w-sm lg:max-w-md xl:max-w-lg"
         />
       </motion.div>
     </motion.div>
