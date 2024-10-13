@@ -2,11 +2,11 @@
 import { Socials } from "@/constants";
 import React, { useState } from "react";
 import Image from "next/image";
-import { MenuIcon, XIcon } from "@heroicons/react/outline"; // Import menu and close icons
+import { MenuIcon, XIcon } from "@heroicons/react/outline"; 
 import Link from "next/link";
 
 const Navbar: React.FC = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false); // State to manage menu visibility
+  const [isMenuOpen, setIsMenuOpen] = useState(false); 
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -25,7 +25,7 @@ const Navbar: React.FC = () => {
           />
         </Link>
 
-        {/* Menu Toggle for Small Screens */}
+      
         <div className="md:hidden">
           <button onClick={toggleMenu} className="p-2">
             {isMenuOpen ? (
@@ -36,7 +36,7 @@ const Navbar: React.FC = () => {
           </button>
         </div>
 
-        {/* Navbar Links */}
+      
         <div
           className={`hidden md:flex w-[500px] h-full flex-row items-center justify-between`}
         >
@@ -71,7 +71,7 @@ const Navbar: React.FC = () => {
         </div>
       </div>
 
-      {/* Mobile Menu */}
+   
       {isMenuOpen && (
         <div className="flex flex-col md:hidden bg-[#0300145e] border border-[#7042f861] rounded-md mt-2 px-4 py-2 absolute w-full left-0">
           <Link

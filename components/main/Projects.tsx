@@ -5,7 +5,7 @@ const Projects = () => {
     {
       title: "Project 1",
       description: "Description for Project 1.",
-      image: "/card1.png", // Ensure these paths are correct
+      image: "/card1.png", 
     },
     {
       title: "Project 2",

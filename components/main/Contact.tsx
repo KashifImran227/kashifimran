@@ -14,10 +14,10 @@ const ContactUs: React.FC = () => {
     if (form.current) {
       try {
         await emailjs.sendForm(
-          "service_oadb8fe", // Replace with your actual service ID
-          "template_jcsjill", // Replace with your actual template ID
+          "service_oadb8fe", 
+          "template_jcsjill", 
           form.current,
-          "kashif.imran227@gmail.com" // Replace with your actual public key
+          "kashif.imran227@gmail.com" 
         );
         setStatusMessage("Message sent successfully!");
       } catch (error) {
@@ -29,8 +29,8 @@ const ContactUs: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-br to-gray-800 p-10 ">
-      <h1 className="text-purple-200 text-3xl font-light mb-6 text-center">
+    <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-br to-gray-800 p-10  ">
+      <h1 className="text-purple-200 text-3xl font-light mb-6 mt-16 text-center">
         CONTACT ME
       </h1>
       <form
@@ -94,11 +94,7 @@ const ContactUs: React.FC = () => {
           {statusMessage}
         </p>
       )}
-      <div className="text-white h-auto mb-10 border-collapse bg-[#3a103a9f] items-center w-full mt-6">
-        <marquee behavior="scroll" direction="left">
-          Thanks for considering me as your future partner
-        </marquee>
-      </div>
+     
     </div>
   );
 };

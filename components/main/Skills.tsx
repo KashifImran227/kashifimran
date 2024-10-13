@@ -1,9 +1,9 @@
-import { SparklesIcon } from "lucide-react"; // Ensure the import is correct
+import { SparklesIcon } from "lucide-react"; 
 import React from "react";
 import { motion } from "framer-motion";
 
 const Skills = () => {
-  // Animation variants for fade-in effect
+ 
   const fadeInUp = {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0 },
@@ -27,7 +27,7 @@ const Skills = () => {
   ];
 
   return (
-    // Section with fade-in animation and grid layout for skills
+  
     <>
     
       <section className="py-20 bg-gray-900 text-white h-full">
@@ -39,7 +39,7 @@ const Skills = () => {
               variants={fadeInUp}
               initial="hidden"
               animate="visible"
-              transition={{ duration: 0.5, delay: index * 0.2 }} // staggered animation
+              transition={{ duration: 0.5, delay: index * 0.2 }} 
               className="flex flex-col items-center bg-gray-800 p-5 rounded-lg shadow-lg hover:shadow-2xl hover:scale-105 transition-transform duration-300 ease-in-out"
             >
               <SparklesIcon className="h-10 w-10 text-yellow-500 mb-2" />
