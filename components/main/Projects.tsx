@@ -1,11 +1,12 @@
 import React from "react";
+import Image from "next/image";
 
 const Projects = () => {
   const projectData = [
     {
       title: "Project 1",
       description: "Description for Project 1.",
-      image: "/card1.png", 
+      image: "/card1.png",
     },
     {
       title: "Project 2",
@@ -28,10 +29,12 @@ const Projects = () => {
             key={index}
             className="flex flex-col bg-gray-800 rounded-lg overflow-hidden shadow-lg transition-transform duration-300 transform hover:scale-105 hover:bg-gray-700"
           >
-            <img
+            <Image
               src={project.image}
               alt={project.title}
-              className="w-full h-48 object-cover transition-transform duration-300 transform hover:scale-110"
+              width={500}
+              height={300}
+              className="object-cover transition-transform duration-300 transform hover:scale-110"
             />
             <div className="p-4">
               <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
