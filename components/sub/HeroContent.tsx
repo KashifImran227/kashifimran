@@ -6,7 +6,7 @@ import {
   slideInFromTop,
   slideInFromRight,
 } from "@/utils/motion";
-import { Download, SparklesIcon } from "lucide-react";
+import { SparklesIcon } from "lucide-react";
 import Image from "next/image";
 
 const HeroContent: React.FC = () => {
@@ -44,12 +44,12 @@ const HeroContent: React.FC = () => {
           </p>
           <motion.a
             variants={slideInFromLeft(1)}
-            href="/path/to/your/document.pdf" // Replace with your PDF file path
+            href="/Kashif-Resume.pdf" // Ensure this path is correct
             download
-            className="inline-block" // Make anchor behave like a button
+            className="inline-block"
           >
-            <button className=" py-2 px-4 lg:px-8 border rounded-xl border-[#7042f88b] bg-purple-950 text-white opacity-90 hover:bg-purple-400 transition-colors duration-300 hover:scale-105 focus:outline-none ">
-             Download CV
+            <button className="py-2 px-4 lg:px-8 border rounded-xl border-[#7042f88b] bg-purple-950 text-white opacity-90 hover:bg-purple-400 transition-colors duration-300 hover:scale-105 focus:outline-none">
+              Download CV
             </button>
           </motion.a>
         </motion.div>
