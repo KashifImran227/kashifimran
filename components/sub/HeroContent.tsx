@@ -10,6 +10,24 @@ import { SparklesIcon } from "lucide-react";
 import Image from "next/image";
 
 const HeroContent: React.FC = () => {
+  // Throttle function for smooth animations
+  const throttle = (fn: Function, wait: number) => {
+    let lastCall = 0;
+    return function (...args: any) {
+      const now = Date.now();
+      if (now - lastCall > wait) {
+        lastCall = now;
+        fn(...args);
+      }
+    };
+  };
+
+  // Example of a possible event handler
+  const handleClick = throttle(() => {
+    // Perform click action if needed
+    console.log("CV Downloaded");
+  }, 100);
+
   return (
     <motion.div
       initial="hidden"
@@ -47,6 +65,7 @@ const HeroContent: React.FC = () => {
             href="/Kashif-Resume.pdf"
             download
             className="inline-block"
+            onClick={handleClick} // Use throttled click handler if needed
           >
             <button className="py-2 px-4 lg:px-8 border rounded-xl border-[#7042f88b] bg-purple-950 text-white opacity-90 hover:bg-purple-400 transition-colors duration-300 hover:scale-105 focus:outline-none">
               Download CV
